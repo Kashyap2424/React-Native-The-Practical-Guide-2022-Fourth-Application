@@ -15,11 +15,16 @@ const ManageExpense = ({ route, navigation }) => {
     });
   }, [navigation, isEditing]);
 
-  function deleteExpenseHandler() {}
+  function deleteExpenseHandler() {
+    navigation.goBack();
+  }
 
-  function cancelHandler(params) {}
-  function confirmHandler(params) {
-    Add;
+  function cancelHandler() {
+    navigation.goBack();
+  }
+
+  function confirmHandler() {
+    navigation.goBack();
   }
 
   return (
@@ -61,6 +66,7 @@ const styles = StyleSheet.create({
   button: {
     minWidth: 120,
     marginBottom: 8,
+    marginHorizontal: 8,
   },
   deleteContainer: {
     marginTop: 16,
