@@ -11,6 +11,7 @@ const AllExpenses = () => {
     <ExpensesOutput
       expenses={expensesContext.expenses}
       expensesPeriodName="Total"
+      fallBackText="No registered expenses found!"
     />
   );
 };
