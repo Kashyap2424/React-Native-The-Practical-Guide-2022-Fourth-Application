@@ -1,14 +1,14 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, View } from "react-native";
 import React from "react";
 import ExpensesSummary from "./ExpensesSummary";
 import ExpensesList from "./ExpensesList";
 
-const ExpensesOutput = ({ expenses }) => {
+const ExpensesOutput = ({ expenses, expensesPeriodName }) => {
   return (
-    <>
-      <ExpensesSummary />
+    <View>
+      <ExpensesSummary expenses={expenses} periodName={expensesPeriodName} />
       <ExpensesList />
-    </>
+    </View>
   );
 };
 
