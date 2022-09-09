@@ -12,6 +12,7 @@ const RecentExpenses = () => {
   useEffect(() => {
     async function getExpenses() {
       const expenses = await fetchExpenses();
+      expensesContext.setExpenses(expenses);
     }
 
     getExpenses();

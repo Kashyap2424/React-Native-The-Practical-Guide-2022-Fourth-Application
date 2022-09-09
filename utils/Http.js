@@ -16,7 +16,7 @@ export async function fetchExpenses(params) {
     const expenseObject = {
       id: key,
       amount: response.data[key].amount,
-      date: new Date(response.date[key].date),
+      date: new Date(response.data[key].date),
       description: response.data[key].description,
     };
     expenses.push(expenseObject);
