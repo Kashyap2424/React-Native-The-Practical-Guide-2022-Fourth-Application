@@ -1,9 +1,38 @@
 import { StyleSheet, Text, View } from "react-native";
 
+import Input from "./Input";
+
 const ExpensesForm = () => {
+  function amountChangeHandler(params) {}
+
+  function dateChangeHandler(params) {}
+
+  function dateChangeHandler(params) {}
+
   return (
     <View>
-      <Text>ExpensesForm</Text>
+      <Input
+        label="Amount"
+        textInputConfig={{
+          keyboardType: "decimal-pad",
+          onChangeText: amountChangeHandler,
+        }}
+      />
+      <Input
+        label="Date"
+        textInputConfig={{
+          placeholder: "YYYY-MM-DD",
+          maxLength: 10,
+          onChangeText: dateChangeHandler,
+        }}
+      />
+      <Input
+        label="Description"
+        textInputConfig={{
+          multiline: true,
+          onChangeText: amountChangeHandler,
+        }}
+      />
     </View>
   );
 };
