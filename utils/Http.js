@@ -12,7 +12,7 @@ export async function storeExpense(expenseData) {
   return id;
 }
 
-export async function fetchExpenses(params) {
+export async function fetchExpenses() {
   const response = await axios.get(BACKEND_URL + "/expenses.json");
 
   const expenses = [];
@@ -28,4 +28,12 @@ export async function fetchExpenses(params) {
   }
 
   return expenses;
+}
+
+export function updateExpenses(id, expenseData) {
+  return axios.put(BACKEND_URL + `/expenses/${id}.json`, expenseData);
+}
+
+export function deleteExpense(id) {
+  return axios.delete(BACKEND_URL + `/expenses/${id}.json`);
 }
